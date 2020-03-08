@@ -1,0 +1,7 @@
+var data =[
+    {
+        "titre": "Mon premier logo",
+        "desc": "Il était temps pour moi de me créer une identité visuelle, j'ai donc commencé à imaginer mon logo et voici le premier résultat. Je joue ici avec mes deux initiales (A et J) afin de faire un monogramme.",
+        "image": "media/logos/monLogo_1.svg"
+    }
+]

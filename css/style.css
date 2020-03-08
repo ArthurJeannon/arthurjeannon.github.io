@@ -1,0 +1,445 @@
+/* ======================================================================= */
+/* ==============================  GENERAL  ============================== */
+/* ======================================================================= */
+:root{
+    --color-une: #E63E44;
+    --color-deux: #A20E3F;
+    --color-trois: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background: var(--color-deux);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--color-trois);
+}
+
+body{
+    margin: 0px;
+    font-family: 'Josefin Sans', ;
+    position: relative;
+
+    
+}
+
+div, header, footer, nav, section, article, aside, figure{
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* ======================================================================= */
+/* ===============================  HEADER  ============================== */
+/* ======================================================================= */
+
+header{
+    background-color: var(--color-une);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header figure{
+    text-align: center;
+     
+}
+
+header img{
+    height: 500px;
+    width: auto;
+}
+
+/* ======================================================================= */
+/* =================================  NAV  =============================== */
+/* ======================================================================= */
+
+nav.unfixed{
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+}
+
+nav.fixed{
+    overflow: visible;
+    position: fixed;
+    top: 0px;
+    opacity: 1;
+
+    height: 69px;
+    width: 100vw;
+
+    background-color: var(--color-une);
+    border-bottom: 0px;
+}
+
+/* =========================  Mon logo  ============================ */
+
+nav figure{
+    margin: 0px;
+    margin-left: 30px;
+
+    padding: 5px;
+    height: 100%;
+
+    float: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav figure img{
+    height: 90%;
+    width: auto;
+}
+
+nav figure img:nth-child(2){
+    height: 70%;
+    margin-left: 30px;
+}
+
+/* ========================  Supérieure  =========================== */
+
+#superieure{
+    list-style: none;
+    padding: 0px;
+    margin: auto;
+    width: 60%;
+    float: none;
+    
+    position: relative;
+}
+
+nav.fixed #superieure{
+    float: right;
+}
+
+#superieure li{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6em;
+    color: var(--color-trois);
+    
+    display: block;
+    padding: 20px 0px 20px 0px;
+    
+    transition-duration: 0.2s;
+}
+
+nav.fixed a:hover , nav.fixed a:focus{
+    background-color: var(--color-trois);
+    color: var(--color-une);
+    
+    transition-duration: 0.2s;
+}
+
+/* ========================  Inférieure  =========================== */
+
+#inferieure{
+    width: 0%;
+    opacity: 0;
+    
+    background-color: var(--color-trois);
+    color: var(--color-une);
+    border: var(--color-une) solid 3px;
+    
+    position: absolute;
+    top: 70px;
+
+    visibility: hidden;
+}
+
+#superieure:active{
+    background-color: #000;
+}
+
+#superieure li:hover > ul , #superieure li:focus > ul{
+    visibility: visible;
+    opacity: 1;
+    padding: 0px;
+    
+    width: auto;
+}
+
+#inferieure li{
+    display: block;
+
+    float: none;
+    
+    width: 100%;
+}
+
+#inferieure a{
+    display: block;
+    padding: 10px;
+    
+    font-size: 1em;
+    font-weight: 600;
+    text-align: left;
+    
+    color: var(--color-une);
+}
+
+#inferieure a:hover,#inferieure a:focus{
+    color: var(--color-trois);
+    
+    background-color: var(--color-une);
+}
+
+/* =============================================================================== */
+/* =================================  MAIN - Index  ============================== */
+/* =============================================================================== */
+
+main{
+    padding-top: 15vh;
+}
+
+main section{
+    margin: auto;
+    width: 800px;
+    min-height: 500px;
+
+    margin-bottom: 100px;
+}
+
+main section h1{
+    font-size: 2.5em;
+    color: var(--color-deux);
+
+    margin-left: 20px;
+
+    text-align: center;
+}
+
+main section article{
+    display: flex;
+    flex-direction: row;
+}
+
+div.placeholder{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+
+    background-color: var(--color-une);
+}
+
+main section p{
+    box-sizing: border-box;
+    width: 400px;
+
+    font-size: 1.3em;
+    font-weight: 600;
+
+    margin: 0px;
+    padding-left: 20px;
+    color: #000;
+}
+
+main svg{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+/* =============================================================================== */
+/* ===============================  MAIN - Créations  ============================ */
+/* =============================================================================== */
+
+#creations{
+    width: 60vw;
+}
+
+#creations div.conteneur{
+    width: 33%;
+
+    float: left;
+}
+
+#creations div div{
+    background-color: var(--color-trois);
+    border: 6px solid var(--color-une);
+
+    margin: 0.5em;
+}
+
+#creations div.conteneur:hover div{
+    background-color: var(--color-une);
+}
+
+#creations div.conteneur div:hover p{
+    color: var(--color-trois);
+}
+
+#creations p{
+    color: var(--color-une);
+
+    margin-top: 25%;
+    margin-bottom: 5%;
+
+    font-size: 2em;
+
+    font-weight: 900;
+}
+
+/* =============================================================================== */
+/* =================================  MAIN - LOGOS  ============================== */
+/* =============================================================================== */
+
+#logos section{
+    margin: auto;
+    margin: 5em auto 5em auto;
+    padding-bottom: 5em;
+    border-bottom: 5px solid var(--color-une)
+}
+
+#logos h1{
+    text-align: left;
+}
+
+#logos p{
+    width: 100%;
+    text-align: left;
+}
+
+#logos figure{
+    margin: auto;
+    text-align: center;
+}
+
+#logos img{
+    width: 50%;
+    height: auto;
+}
+
+
+/* =============================================================================== */
+/* ==============================  MAIN - print =========================== */
+/* =============================================================================== */
+
+#print section{
+    margin: auto;
+    margin: 5em auto 5em auto;
+    padding-bottom: 5em;
+    border-bottom: 5px solid var(--color-une)
+}
+
+#print h1{
+    text-align: left;
+}
+
+#print p{
+    width: 100%;
+    text-align: left;
+}
+
+#print figure{
+    margin: auto;
+    text-align: center;
+}
+
+#print img{
+    width: 75%;
+    height: auto;
+}
+
+/* =============================================================================== */
+/* ==============================  MAIN - ILLUSTRATION =========================== */
+/* =============================================================================== */
+
+#illu section{
+    margin: auto;
+    margin: 5em auto 5em auto;
+    padding-bottom: 5em;
+    border-bottom: 5px solid var(--color-une)
+}
+
+#illu h1{
+    text-align: left;
+}
+
+#illu p{
+    width: 100%;
+    text-align: left;
+}
+
+#illu figure{
+    margin: auto;
+    text-align: center;
+}
+
+#illu img{
+    width: 100%;
+    height: auto;
+}
+
+#illu section:nth-child(4) img{
+    width: 50%;
+    height: auto;
+}
+
+/* =============================================================================== */
+/* ==============================  MAIN - vetements =========================== */
+/* =============================================================================== */
+
+#clothes section{
+    margin: auto;
+    margin: 5em auto 5em auto;
+    padding-bottom: 5em;
+    border-bottom: 5px solid var(--color-une)
+}
+
+#clothes h1{
+    text-align: left;
+}
+
+#clothes p{
+    width: 100%;
+    text-align: left;
+}
+
+#clothes figure{
+    margin: auto;
+    text-align: center;
+}
+
+#clothes img{
+    width: 50%;
+    height: auto;
+}
+
+#clothes figure:first-child img{
+    width: 50%;
+    height: auto;
+
+    float: left;
+}
+
+
+
+/* =============================================================================== */
+/* ==================================== FOOTER =================================== */
+/* =============================================================================== */
+
+
+footer{
+    width: 100%;
+    background-color: var(--color-une);
+    height: 5em;
+}

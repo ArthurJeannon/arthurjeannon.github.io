@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/svg.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap" rel="stylesheet">
+    <title>Jeannon Arthur</title>
+</head>
+
+<!-- ============================================================================================= -->
+<!-- ============================================================================================= -->
+<!-- ============================================================================================= -->
+<!-- ============================================================================================= -->
+
+<body>
+    <header id="head">
+        <div>
+            <figure><img src="media/logo_principal/mylogo.svg"/></figure>
+        </div>
+    </header>
+
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+
+    <nav id="main" class="unfixed">
+        <figure id="nav-logo" class="unvisible"><img src="media/logo_principal/logoseul.svg"/><img src="media/logo_principal/nomseul.svg"/></figure>
+        <ul id="superieure">
+            <li><a href="index.html">MOI</a></li>
+            <li><a href="#">CREATIONS</a>
+                <ul id="inferieure">
+                    <li><a href="logo.html">Logos</a></li>
+                    <li><a href="illu.html">Illustrations</a></li>
+                    <li><a href="print.html">Prints</a></li>
+                    <li><a href="clothes.html">Vêtements</a></li>
+                    <li><a href="3d.html">Modélisations</a></li>
+                </ul>
+            </li>
+            <li><a href="#">PROJETS</a></li>
+        </ul>
+    </nav>
+
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+   
+    <main id="print">
+        <section>
+            <figure><img src="media/print/brassomatic_affiche.svg" alt="Mon logo" /></figure>
+            <div>
+                <h1>Affiche - Brass O Matic</h1>
+                <p>Affiche réalisée dans le cadre d'un projet à réaliser en 2 jours pour mes études avec comme contrainte le thème Steampunk. Ici le produit fictif était une brasseuse/tireuse de bière nommé le Brass O Matic.</p>
+            </div>
+        </section>
+        <section>
+            <figure><img src="media/print/hhm_affiche.png" alt="Mon logo" /></figure>
+            <div>
+                <h1>Affiche - Hachi Hachi Mystery</h1>
+                <p>Une affiche réalisée pour promouvoir le crowdfunding d'un projet pour mes études. Le personnage visible n'a pas été réalisé par moi.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+    <!-- =============================================================== -->
+    
+    <footer>
+        
+    </footer>
+
+    <!-- ============================================================================================= -->
+    <!-- ============================================================================================= -->
+    <!-- ============================================================================================= -->
+    <!-- ============================================================================================= -->
+
+
+    <!-- =============================================================== -->
+       <!-- ================   SCRIPT - Header/Nav   ================ -->
+    <!-- =============================================================== -->
+
+    <script type="text/javascript">
+
+        var pos = document.getElementById("head").offsetHeight;
+         
+        function myFunction(x) {;
+            if (x >= pos) 
+            {
+                document.getElementById("main").className = "fixed";
+                document.getElementById("nav-logo").className = "visible";
+            }
+            else
+            {
+                document.getElementById("main").className = "unfixed";
+                document.getElementById("nav-logo").className = "unvisible";
+            }
+
+        
+        }
+        function scrollDetect(){
+            var lastScroll = 0;
+            var scrollCount = 0;
+            var isScrolling;
+
+            window.onscroll = function() {
+
+                myFunction(document.documentElement.scrollTop || document.body.scrollTop);
+
+                let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+                if ((currentScroll > 0) && (lastScroll <= currentScroll))
+                {
+                    if ((document.documentElement.scrollTop < pos) && (scrollCount == 0)){
+                        document.documentElement.scrollTop = pos;
+                        scrollCount = 1;
+                    }
+                    
+                    lastScroll = currentScroll;
+
+                    window.addEventListener('scroll', function ( event ) {
+
+                        window.clearTimeout( isScrolling );
+
+                        isScrolling = setTimeout(function() {
+
+                            scrollCount = 0;
+
+                        }, 100);
+
+                    }, false);
+                }
+                else
+                {
+                    if (((document.documentElement.scrollTop > 0) && (document.documentElement.scrollTop <= (pos + 100))) && (scrollCount == 0)){
+                        document.documentElement.scrollTop = 0;
+                        scrollCount = 1;
+                    }
+                    
+                    lastScroll = currentScroll;
+
+                    window.addEventListener('scroll', function ( event ) {
+
+                        window.clearTimeout( isScrolling );
+
+                        isScrolling = setTimeout(function() {
+
+                            scrollCount = 0;
+
+                        }, 100);
+
+                    }, false);
+                }
+            };
+        }
+        scrollDetect();
+    </script>
+
+    <!-- =============================================================== -->
+       <!-- ==================   SCRIPT - Parcous   ================= -->
+    <!-- =============================================================== -->
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+</html>
