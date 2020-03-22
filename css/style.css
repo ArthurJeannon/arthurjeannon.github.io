@@ -26,14 +26,19 @@ body::-webkit-scrollbar-thumb{
 body{
     margin: 0px;
     font-family: 'Josefin Sans', ;
-    position: relative;
-
-    
+    position: relative;    
 }
 
 div, header, footer, nav, section, article, aside, figure{
     overflow: hidden;
     box-sizing: border-box;
+}
+
+h1{
+    color: var(--color-une);
+    font-size: 3em;
+
+    text-align: center;
 }
 
 /* ======================================================================= */
@@ -165,10 +170,6 @@ nav.fixed a:hover , nav.fixed a:focus{
     visibility: hidden;
 }
 
-#superieure:active{
-    background-color: #000;
-}
-
 #superieure li:hover > ul , #superieure li:focus > ul{
     visibility: visible;
     opacity: 1;
@@ -218,7 +219,7 @@ main section{
     margin-bottom: 100px;
 }
 
-main section h1{
+main section h2{
     font-size: 2.5em;
     color: var(--color-deux);
 
@@ -256,6 +257,16 @@ main svg{
     display: block;
     margin: auto;
     text-align: center;
+}
+
+main img.bigger{
+    width: 75%;
+    height: auto;
+}
+
+main img.smaller{
+    width: 50%;
+    height: auto;
 }
 
 /* =============================================================================== */
@@ -309,7 +320,7 @@ main svg{
     border-bottom: 5px solid var(--color-une)
 }
 
-#logos h1{
+#logos h2{
     text-align: left;
 }
 
@@ -340,7 +351,7 @@ main svg{
     border-bottom: 5px solid var(--color-une)
 }
 
-#print h1{
+#print h2{
     text-align: left;
 }
 
@@ -370,7 +381,7 @@ main svg{
     border-bottom: 5px solid var(--color-une)
 }
 
-#illu h1{
+#illu h2{
     text-align: left;
 }
 
@@ -389,7 +400,7 @@ main svg{
     height: auto;
 }
 
-#illu section:nth-child(4) img{
+#illu section:nth-child(5) img{
     width: 50%;
     height: auto;
 }
@@ -405,7 +416,7 @@ main svg{
     border-bottom: 5px solid var(--color-une)
 }
 
-#clothes h1{
+#clothes h2{
     text-align: left;
 }
 
@@ -431,7 +442,100 @@ main svg{
     float: left;
 }
 
+/* =============================================================================== */
+/* ==============================  MAIN - vetements =========================== */
+/* =============================================================================== */
 
+#troisd section{
+    margin: auto;
+    margin: 5em auto 5em auto;
+    padding-bottom: 5em;
+    border-bottom: 5px solid var(--color-une)
+}
+
+#troisd h2{
+    text-align: left;
+}
+
+#troisd p{
+    width: 100%;
+    text-align: left;
+}
+
+#troisd figure{
+    margin: auto;
+    text-align: center;
+}
+
+#troisd img{
+    width: 50%;
+    height: auto;
+}
+
+/* =============================================================================== */
+/* ==============================  MAIN - hhm =========================== */
+/* =============================================================================== */
+
+#hhm section{
+    margin: auto;
+    margin: 5em auto 5em auto;
+    padding-bottom: 5em;
+    border-bottom: 5px solid var(--color-une)
+}
+
+#hhm h2{
+    text-align: left;
+}
+
+#hhm p{
+    margin: 2em 0em 2em 0em;
+    width: 100%;
+    text-align: left;
+}
+
+#hhm figure{
+    margin: auto;
+    text-align: center;
+}
+
+#hhm img{
+    width: 50%;
+    height: auto;
+}
+
+#hhm a{
+    color: var(--color-une);
+}
+
+/* =============================================================================== */
+/* ==============================  MAIN - tsa =========================== */
+/* =============================================================================== */
+
+#tsa section{
+    margin: auto;
+    margin: 5em auto 5em auto;
+    padding-bottom: 5em;
+    border-bottom: 5px solid var(--color-une)
+}
+
+#tsa h2{
+    text-align: left;
+}
+
+#tsa p{
+    margin: 2em 0em 2em 0em;
+    width: 100%;
+    text-align: left;
+}
+
+#tsa figure{
+    margin: auto;
+    text-align: center;
+}
+
+#tsa a{
+    color: var(--color-une);
+}
 
 /* =============================================================================== */
 /* ==================================== FOOTER =================================== */
