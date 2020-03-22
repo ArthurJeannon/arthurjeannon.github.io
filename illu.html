@@ -30,7 +30,7 @@
         <figure id="nav-logo" class="unvisible"><img src="media/logo_principal/logoseul.svg"/><img src="media/logo_principal/nomseul.svg"/></figure>
         <ul id="superieure">
             <li><a href="index.html">MOI</a></li>
-            <li><a href="#">CREATIONS</a>
+            <li><a href="creations.html">CREATIONS</a>
                 <ul id="inferieure">
                     <li><a href="logo.html">Logos</a></li>
                     <li><a href="illu.html">Illustrations</a></li>
@@ -39,7 +39,11 @@
                     <li><a href="3d.html">Modélisations</a></li>
                 </ul>
             </li>
-            <li><a href="#">PROJETS</a></li>
+            <li><a href="#">PROJETS</a><ul id="inferieure">
+                <li><a href="hhm.html">Hachi Hachi Mystery</a></li>
+                <li><a href="tsa.html">The Steam Artists</a></li>
+            </ul>
+        </li>
         </ul>
     </nav>
 
@@ -48,31 +52,32 @@
     <!-- =============================================================== -->
    
     <main id="illu">
+        <h1>Créations > Illustrations</h1>
         <section>
             <figure><img src="media/illustrations/fond01.svg" alt="Mon logo" /></figure>
             <div>
-                <h1>Pont de nuit</h1>
+                <h2>Pont de nuit</h2>
                 <p>Cette illustration en Flat-design fut ma première et mer serva principalement d'entraînement. Elle représente un pont entre deux paysages au-dessus de la mer avec le lune qui se reflète dans l'eau.</p>
             </div>
         </section>
         <section>
             <figure><img src="media/illustrations/fond02.svg" alt="Mon logo" /></figure>
             <div>
-                <h1>Montagnes</h1>
+                <h2>Montagnes</h2>
                 <p>Inspiré par un paysage durant mes vacances, j'ai tenté de le reproduire pour améliorer mes compétences en Flat-design.</p>
             </div>
         </section>
         <section>
             <figure><img src="media/illustrations/fond03.svg" alt="Mon logo" /></figure>
             <div>
-                <h1>Espace</h1>
+                <h2>Espace</h2>
                 <p>L'astronomie est un sujet qui m'attire beaucoup depuis longtemps et j'ai donc voulu faire une illustration sur ce thème.</p>
             </div>
         </section>
         <section>
             <figure><img src="media/illustrations/vaporwave.svg" alt="Mon logo" /></figure>
             <div>
-                <h1>Vaporwave</h1>
+                <h2>Vaporwave</h2>
                 <p>Une expérimentation reprenant les couleurs du style Vaporwave.</p>
             </div>
         </section>
@@ -96,88 +101,13 @@
        <!-- ================   SCRIPT - Header/Nav   ================ -->
     <!-- =============================================================== -->
 
-    <script type="text/javascript">
-
-        var pos = document.getElementById("head").offsetHeight;
-         
-        function myFunction(x) {;
-            if (x >= pos) 
-            {
-                document.getElementById("main").className = "fixed";
-                document.getElementById("nav-logo").className = "visible";
-            }
-            else
-            {
-                document.getElementById("main").className = "unfixed";
-                document.getElementById("nav-logo").className = "unvisible";
-            }
-
-        
-        }
-        function scrollDetect(){
-            var lastScroll = 0;
-            var scrollCount = 0;
-            var isScrolling;
-
-            window.onscroll = function() {
-
-                myFunction(document.documentElement.scrollTop || document.body.scrollTop);
-
-                let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-                if ((currentScroll > 0) && (lastScroll <= currentScroll))
-                {
-                    if ((document.documentElement.scrollTop < pos) && (scrollCount == 0)){
-                        document.documentElement.scrollTop = pos;
-                        scrollCount = 1;
-                    }
-                    
-                    lastScroll = currentScroll;
-
-                    window.addEventListener('scroll', function ( event ) {
-
-                        window.clearTimeout( isScrolling );
-
-                        isScrolling = setTimeout(function() {
-
-                            scrollCount = 0;
-
-                        }, 100);
-
-                    }, false);
-                }
-                else
-                {
-                    if (((document.documentElement.scrollTop > 0) && (document.documentElement.scrollTop <= (pos + 100))) && (scrollCount == 0)){
-                        document.documentElement.scrollTop = 0;
-                        scrollCount = 1;
-                    }
-                    
-                    lastScroll = currentScroll;
-
-                    window.addEventListener('scroll', function ( event ) {
-
-                        window.clearTimeout( isScrolling );
-
-                        isScrolling = setTimeout(function() {
-
-                            scrollCount = 0;
-
-                        }, 100);
-
-                    }, false);
-                }
-            };
-        }
-        scrollDetect();
-    </script>
+    <script type="text/javascript" src="js/scroll.js"></script>
 
     <!-- =============================================================== -->
        <!-- ==================   SCRIPT - Parcous   ================= -->
     <!-- =============================================================== -->
 
     <script type="text/javascript">
-
     </script>
 
 </body>

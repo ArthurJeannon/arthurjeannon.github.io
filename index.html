@@ -39,7 +39,11 @@
                     <li><a href="3d.html">Modélisations</a></li>
                 </ul>
             </li>
-            <li><a href="#">PROJETS</a></li>
+            <li><a href="#">PROJETS</a><ul id="inferieure">
+                <li><a href="hhm.html">Hachi Hachi Mystery</a></li>
+                <li><a href="tsa.html">The Steam Artists</a></li>
+            </ul>
+        </li>
         </ul>
     </nav>
 
@@ -49,14 +53,14 @@
    
     <main>
        <section id="">
-            <h1>Présentation</h1>
+            <h2>Présentation</h2>
             <article>
                 <div class="placeholder"></div>
                 <p>Les jeux vidéo, leur conception et le graphismes sont mes actuelles passions occupant la majorité de mon temps.</p>
             </article>
         </section>
         <section>
-            <h1>Parcours</h1>
+            <h2>Parcours</h2>
             
             <svg xmlns="http://www.w3.org/2000/svg" height="500px" viewBox="0 0 1488.05 1601.58">
                 <title>Mon Parcours</title>
@@ -73,7 +77,7 @@
             </svg>
         </section>
         <section>
-            <h1>Présentation</h1>
+            <h2>Présentation</h2>
             <article>
                 <div class="placeholder"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -98,88 +102,13 @@
        <!-- ================   SCRIPT - Header/Nav   ================ -->
     <!-- =============================================================== -->
 
-    <script type="text/javascript">
-
-        var pos = document.getElementById("head").offsetHeight;
-         
-        function myFunction(x) {;
-            if (x >= pos) 
-            {
-                document.getElementById("main").className = "fixed";
-                document.getElementById("nav-logo").className = "visible";
-            }
-            else
-            {
-                document.getElementById("main").className = "unfixed";
-                document.getElementById("nav-logo").className = "unvisible";
-            }
-
-        
-        }
-        function scrollDetect(){
-            var lastScroll = 0;
-            var scrollCount = 0;
-            var isScrolling;
-
-            window.onscroll = function() {
-
-                myFunction(document.documentElement.scrollTop || document.body.scrollTop);
-
-                let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-                if ((currentScroll > 0) && (lastScroll <= currentScroll))
-                {
-                    if ((document.documentElement.scrollTop < pos) && (scrollCount == 0)){
-                        document.documentElement.scrollTop = pos;
-                        scrollCount = 1;
-                    }
-                    
-                    lastScroll = currentScroll;
-
-                    window.addEventListener('scroll', function ( event ) {
-
-                        window.clearTimeout( isScrolling );
-
-                        isScrolling = setTimeout(function() {
-
-                            scrollCount = 0;
-
-                        }, 100);
-
-                    }, false);
-                }
-                else
-                {
-                    if (((document.documentElement.scrollTop > 0) && (document.documentElement.scrollTop <= (pos + 100))) && (scrollCount == 0)){
-                        document.documentElement.scrollTop = 0;
-                        scrollCount = 1;
-                    }
-                    
-                    lastScroll = currentScroll;
-
-                    window.addEventListener('scroll', function ( event ) {
-
-                        window.clearTimeout( isScrolling );
-
-                        isScrolling = setTimeout(function() {
-
-                            scrollCount = 0;
-
-                        }, 100);
-
-                    }, false);
-                }
-            };
-        }
-        scrollDetect();
-    </script>
+    <script type="text/javascript" src="js/scroll.js"></script>
 
     <!-- =============================================================== -->
        <!-- ==================   SCRIPT - Parcous   ================= -->
     <!-- =============================================================== -->
 
     <script type="text/javascript">
-
     </script>
 
 </body>
