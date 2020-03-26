@@ -25,7 +25,7 @@ body::-webkit-scrollbar-thumb{
 
 body{
     margin: 0px;
-    font-family: 'Josefin Sans', ;
+    font-family: 'Josefin Sans';
     position: relative;    
 }
 
@@ -39,6 +39,10 @@ h1{
     font-size: 3em;
 
     text-align: center;
+}
+
+p{
+    font-family: 'Rubik', sans-serif;
 }
 
 /* ======================================================================= */
@@ -80,7 +84,7 @@ nav.fixed{
     top: 0px;
     opacity: 1;
 
-    height: 69px;
+    height: 8vh;
     width: 100vw;
 
     background-color: var(--color-une);
@@ -165,7 +169,7 @@ nav.fixed a:hover , nav.fixed a:focus{
     border: var(--color-une) solid 3px;
     
     position: absolute;
-    top: 70px;
+    top: 8vh;
 
     visibility: hidden;
 }
@@ -365,11 +369,6 @@ main img.smaller{
     text-align: center;
 }
 
-#print img{
-    width: 75%;
-    height: auto;
-}
-
 /* =============================================================================== */
 /* ==============================  MAIN - ILLUSTRATION =========================== */
 /* =============================================================================== */
@@ -430,11 +429,6 @@ main img.smaller{
     text-align: center;
 }
 
-#clothes img{
-    width: 50%;
-    height: auto;
-}
-
 #clothes figure:first-child img{
     width: 50%;
     height: auto;
@@ -443,7 +437,7 @@ main img.smaller{
 }
 
 /* =============================================================================== */
-/* ==============================  MAIN - vetements =========================== */
+/* ==============================  MAIN - Modelisation =========================== */
 /* =============================================================================== */
 
 #troisd section{
@@ -465,11 +459,6 @@ main img.smaller{
 #troisd figure{
     margin: auto;
     text-align: center;
-}
-
-#troisd img{
-    width: 50%;
-    height: auto;
 }
 
 /* =============================================================================== */
@@ -496,11 +485,6 @@ main img.smaller{
 #hhm figure{
     margin: auto;
     text-align: center;
-}
-
-#hhm img{
-    width: 50%;
-    height: auto;
 }
 
 #hhm a{
