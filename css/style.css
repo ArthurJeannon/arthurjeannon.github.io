@@ -134,7 +134,7 @@ nav.fixed #superieure{
 }
 
 #superieure li{
-    width: 33%;
+    width: 25%;
     float: left;
     text-align: center;
 }
@@ -237,14 +237,6 @@ main section article{
     flex-direction: row;
 }
 
-div.placeholder{
-    width: 400px;
-    height: 300px;
-    padding: 20px;
-
-    background-color: var(--color-une);
-}
-
 main section p{
     box-sizing: border-box;
     width: 400px;
@@ -277,6 +269,27 @@ main img.smaller{
     height: auto;
 }
 
+section.list{
+    margin: auto;
+    margin: 5em auto 5em auto;
+    padding-bottom: 5em;
+    border-bottom: 5px solid var(--color-une)
+}
+
+p a{
+    color: var(--color-une);
+}
+
+section.projet p{
+    margin: 2em 0em 2em 0em;
+    width: 100%;
+    text-align: left;
+}
+
+section.projet h2{
+    text-align: left;
+}
+
 /* =============================================================================== */
 /* ===============================  MAIN - Créations  ============================ */
 /* =============================================================================== */
@@ -289,13 +302,6 @@ main img.smaller{
     width: 33%;
 
     float: left;
-}
-
-#creations div div{
-    background-color: var(--color-trois);
-    border: 6px solid var(--color-une);
-
-    margin: 0.5em;
 }
 
 #creations div.conteneur:hover div{
@@ -321,13 +327,6 @@ main img.smaller{
 /* =================================  MAIN - LOGOS  ============================== */
 /* =============================================================================== */
 
-#logos section{
-    margin: auto;
-    margin: 5em auto 5em auto;
-    padding-bottom: 5em;
-    border-bottom: 5px solid var(--color-une)
-}
-
 #logos h2{
     text-align: left;
 }
@@ -352,13 +351,6 @@ main img.smaller{
 /* ==============================  MAIN - print =========================== */
 /* =============================================================================== */
 
-#print section{
-    margin: auto;
-    margin: 5em auto 5em auto;
-    padding-bottom: 5em;
-    border-bottom: 5px solid var(--color-une)
-}
-
 #print h2{
     text-align: left;
 }
@@ -376,13 +368,6 @@ main img.smaller{
 /* =============================================================================== */
 /* ==============================  MAIN - ILLUSTRATION =========================== */
 /* =============================================================================== */
-
-#illu section{
-    margin: auto;
-    margin: 5em auto 5em auto;
-    padding-bottom: 5em;
-    border-bottom: 5px solid var(--color-une)
-}
 
 #illu h2{
     text-align: left;
@@ -412,13 +397,6 @@ main img.smaller{
 /* ==============================  MAIN - vetements =========================== */
 /* =============================================================================== */
 
-#clothes section{
-    margin: auto;
-    margin: 5em auto 5em auto;
-    padding-bottom: 5em;
-    border-bottom: 5px solid var(--color-une)
-}
-
 #clothes h2{
     text-align: left;
 }
@@ -444,13 +422,6 @@ main img.smaller{
 /* ==============================  MAIN - Modelisation =========================== */
 /* =============================================================================== */
 
-#troisd section{
-    margin: auto;
-    margin: 5em auto 5em auto;
-    padding-bottom: 5em;
-    border-bottom: 5px solid var(--color-une)
-}
-
 #troisd h2{
     text-align: left;
 }
@@ -469,13 +440,6 @@ main img.smaller{
 /* ==============================  MAIN - hhm =========================== */
 /* =============================================================================== */
 
-#hhm section{
-    margin: auto;
-    margin: 5em auto 5em auto;
-    padding-bottom: 5em;
-    border-bottom: 5px solid var(--color-une)
-}
-
 #hhm h2{
     text-align: left;
 }
@@ -491,20 +455,9 @@ main img.smaller{
     text-align: center;
 }
 
-#hhm a{
-    color: var(--color-une);
-}
-
 /* =============================================================================== */
 /* ==============================  MAIN - tsa =========================== */
 /* =============================================================================== */
-
-#tsa section{
-    margin: auto;
-    margin: 5em auto 5em auto;
-    padding-bottom: 5em;
-    border-bottom: 5px solid var(--color-une)
-}
 
 #tsa h2{
     text-align: left;
@@ -519,10 +472,6 @@ main img.smaller{
 #tsa figure{
     margin: auto;
     text-align: center;
-}
-
-#tsa a{
-    color: var(--color-une);
 }
 
 /* =============================================================================== */
