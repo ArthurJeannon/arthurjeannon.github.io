@@ -139,7 +139,7 @@ nav.fixed #superieure{
     text-align: center;
 }
 
-nav a{
+nav a, nav span.crea{
     text-decoration: none;
     font-weight: 600;
     font-size: 1.6em;
@@ -151,7 +151,7 @@ nav a{
     transition-duration: 0.2s;
 }
 
-nav.fixed a:hover , nav.fixed a:focus{
+nav.fixed a:hover , nav.fixed a:focus, nav.fixed span.crea:hover, nav.fixed span.crea:focus{
     background-color: var(--color-trois);
     color: var(--color-une);
     
@@ -257,10 +257,14 @@ main section p{
     color: #000;
 }
 
-main svg{
+main svg.parcousvg{
     display: block;
     margin: auto;
     text-align: center;
+}
+
+#pre figure, #pro figure{
+    width: 25%;
 }
 
 main img.bigger{
