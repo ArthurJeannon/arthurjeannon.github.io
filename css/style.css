@@ -3,7 +3,7 @@
 /* ======================================================================= */
 :root{
     --color-une: #E63E44;
-    --color-deux: #A20E3F;
+    --color-deux: #720F33;
     --color-trois: #fff;
 }
 
@@ -26,19 +26,28 @@ body::-webkit-scrollbar-thumb{
 body{
     margin: 0px;
     font-family: 'Josefin Sans';
-    position: relative;    
+    position: relative;  
+    
+    text-align: center;
 }
 
 div, header, footer, nav, section, article, aside, figure{
-    overflow: hidden;
     box-sizing: border-box;
+}
+
+header, footer, nav{
+    overflow: hidden;
 }
 
 h1{
     color: var(--color-une);
     font-size: 3em;
 
+    display: inline-block;
+    margin: auto;
+
     text-align: center;
+    border-bottom: 5px var(--color-une) solid;
 }
 
 p{
@@ -93,28 +102,33 @@ nav.fixed{
 
 /* =========================  Mon logo  ============================ */
 
-nav figure{
-    margin: 0px;
-    margin-left: 30px;
+nav{
+    position: relative;
+}
 
-    padding: 5px;
+nav figure{
+    padding: 0px;
+    margin: 0px;
+
     height: 100%;
 
-    float: left;
+    position: absolute;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    left: 0px;
+    top: 0px;
 }
 
 nav figure img{
-    height: 90%;
+    height: 20vh;
     width: auto;
-}
 
-nav figure img:nth-child(2){
-    height: 70%;
-    margin-left: 30px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 /* ========================  Supérieure  =========================== */
@@ -213,6 +227,11 @@ nav.fixed a:hover , nav.fixed a:focus, nav.fixed span.crea:hover, nav.fixed span
 
 main{
     padding-top: 15vh;
+    overflow: visible;
+}
+
+#index, #pre{
+    overflow: hidden;
 }
 
 main section{
@@ -230,6 +249,16 @@ main section h2{
     margin-left: 20px;
 
     text-align: center;
+    position: relative;
+
+    z-index: -999;
+}
+
+main section.list h2::before{
+    content: url(../media/item_2.png);
+    position: absolute;
+    left: -1.2em;
+    bottom: -0.4em;;
 }
 
 main section article{
@@ -245,8 +274,12 @@ main section p{
     font-weight: 600;
 
     margin: 0px;
-    padding-left: 20px;
+    padding-left: 10px;
     color: #000;
+}
+
+main:not(#index) section p{
+    border-left: 5px var(--color-deux) solid;
 }
 
 main svg.parcousvg{

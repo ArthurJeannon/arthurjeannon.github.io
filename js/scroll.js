@@ -1,6 +1,7 @@
 var pos = document.getElementById("head").offsetHeight;
          
-function myFunction(x) {;
+function myFunction(x)
+{
     if (x >= pos) 
     {
         document.getElementById("main").className = "fixed";
@@ -11,8 +12,6 @@ function myFunction(x) {;
         document.getElementById("main").className = "unfixed";
         document.getElementById("nav-logo").className = "unvisible";
     }
-
-
 }
 function scrollDetect(){
     var lastScroll = 0;
