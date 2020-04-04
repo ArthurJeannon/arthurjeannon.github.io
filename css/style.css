@@ -46,6 +46,8 @@ h1{
     display: inline-block;
     margin: auto;
 
+    margin-bottom: 5vh;
+
     text-align: center;
     border-bottom: 5px var(--color-une) solid;
 }
@@ -113,13 +115,22 @@ nav figure{
     height: 100%;
 
     position: absolute;
+}
 
+nav #nav-logo{
     display: flex;
     align-items: center;
     justify-content: center;
 
     left: 0px;
     top: 0px;
+}
+
+nav #nav-rs{
+    right: 20vw;
+    top: 0px;
+
+    z-index: -9;
 }
 
 nav figure img{
@@ -129,6 +140,43 @@ nav figure img{
     position: absolute;
     top: 0px;
     left: 0px;
+}
+
+#rs{
+    position: absolute;
+    top: 5vh;
+    right: 2vw;
+
+    list-style: none;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+#rs li{
+    float: left;
+
+    width: 33%;
+}
+
+#rs img{
+    width: 4vw;
+    height: auto;
+
+    border-bottom: 5px solid var(--color-une);
+
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+}
+
+#rs a:hover img{
+    border-bottom: 5px solid var(--color-trois);
+    color: var(--color-une);
+    width: 4.5vw;
+    height: auto;
+
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
 }
 
 /* ========================  Supérieure  =========================== */
@@ -143,17 +191,13 @@ nav figure img{
     position: relative;
 }
 
-nav.fixed #superieure{
-    float: right;
-}
-
 #superieure li{
     width: 25%;
     float: left;
     text-align: center;
 }
 
-nav a, nav span.crea{
+nav #superieure a, nav span.crea{
     text-decoration: none;
     font-weight: 600;
     font-size: 1.6em;
@@ -162,14 +206,16 @@ nav a, nav span.crea{
     display: block;
     padding: 20px 0px 20px 0px;
     
-    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    transition-duration: 0.1s;
 }
 
-nav.fixed a:hover , nav.fixed a:focus, nav.fixed span.crea:hover, nav.fixed span.crea:focus{
+nav.fixed #superieure a:hover , nav.fixed #superieure a:focus, nav.fixed span.crea:hover, nav.fixed span.crea:focus{
     background-color: var(--color-trois);
     color: var(--color-une);
     
-    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    transition-duration: 0.1s;
 }
 
 /* ========================  Inférieure  =========================== */
@@ -204,7 +250,7 @@ nav.fixed a:hover , nav.fixed a:focus, nav.fixed span.crea:hover, nav.fixed span
     width: 100%;
 }
 
-#inferieure a{
+nav #superieure #inferieure a{
     display: block;
     padding: 10px;
     
@@ -215,7 +261,7 @@ nav.fixed a:hover , nav.fixed a:focus, nav.fixed span.crea:hover, nav.fixed span
     color: var(--color-une);
 }
 
-#inferieure a:hover,#inferieure a:focus{
+nav #superieure #inferieure a:hover, nav #superieure #inferieure a:focus{
     color: var(--color-trois);
     
     background-color: var(--color-une);
@@ -416,7 +462,7 @@ section.projet h2{
     text-align: center;
 }
 
-#illu img{
+#illu img:not(img.smaller){
     width: 100%;
     height: auto;
 }

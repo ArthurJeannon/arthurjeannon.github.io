@@ -6,11 +6,13 @@ function myFunction(x)
     {
         document.getElementById("main").className = "fixed";
         document.getElementById("nav-logo").className = "visible";
+        document.getElementById("nav-rs").className = "visible";
     }
     else
     {
         document.getElementById("main").className = "unfixed";
         document.getElementById("nav-logo").className = "unvisible";
+        document.getElementById("nav-rs").className = "unvisible";
     }
 }
 function scrollDetect(){
