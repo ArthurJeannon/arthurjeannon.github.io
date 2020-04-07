@@ -347,7 +347,7 @@ main section.list h2::before{
     bottom: -0.4em;;
 }
 
-main section article{
+main section div.me{
     display: flex;
     flex-direction: row;
 }
