@@ -322,9 +322,8 @@ main{
 main section{
     margin: auto;
     width: 800px;
-    min-height: 500px;
 
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 main section h2{
@@ -354,7 +353,8 @@ main section div.me{
 
 main section p{
     box-sizing: border-box;
-    width: 400px;
+
+    width: auto;
 
     text-align: left;
 
@@ -378,7 +378,13 @@ main svg.parcousvg{
 }
 
 #pre figure, #pro figure{
-    width: 25%;
+    width: 100%;
+    height: auto;
+}
+
+#pre figure img{
+    width: 100%;
+    height: 100%;
 }
 
 main img.bigger{
