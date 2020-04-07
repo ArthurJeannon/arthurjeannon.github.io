@@ -100,6 +100,20 @@ nav.fixed{
 
     background-color: var(--color-une);
     border-bottom: 0px;
+    transition-duration: 0.5s;
+}
+
+nav.ofixed{
+    overflow: visible;
+    position: fixed;
+    top: 0px;
+    opacity: 1;
+
+    height: 8vh;
+    width: 100vw;
+
+    background-color: var(--color-une);
+    border-bottom: 0px;
 }
 
 /* =========================  Mon logo  ============================ */
@@ -133,13 +147,22 @@ nav #nav-rs{
     z-index: -9;
 }
 
-nav figure img{
+nav #nav-rs img{
     height: 20vh;
     width: auto;
 
     position: absolute;
     top: 0px;
     left: 0px;
+}
+
+nav #nav-logo img{
+    height: auto;
+    width: 15vw;
+
+    position: absolute;
+    top: 0px;
+    left: -1px;
 }
 
 #rs{
@@ -187,14 +210,17 @@ nav figure img{
     margin: auto;
     width: 60%;
     float: none;
+
+    height: 100%;
     
     position: relative;
 }
 
-#superieure li{
+ul:not(.inferieure) li{
     width: 25%;
     float: left;
     text-align: center;
+    height: 100%;
 }
 
 nav #superieure a, nav span.crea{
@@ -203,14 +229,26 @@ nav #superieure a, nav span.crea{
     font-size: 1.6em;
     color: var(--color-trois);
     
-    display: block;
-    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    box-sizing: border-box;
     
     transition-timing-function: ease-out;
     transition-duration: 0.1s;
 }
 
-nav.fixed #superieure a:hover , nav.fixed #superieure a:focus, nav.fixed span.crea:hover, nav.fixed span.crea:focus{
+nav.fixed #superieure a:hover,
+nav.fixed #superieure a:focus,
+nav.fixed span.crea:hover,
+nav.fixed span.crea:focus,
+nav.ofixed #superieure a:hover,
+nav.ofixed #superieure a:focus,
+nav.ofixed span.crea:hover,
+nav.ofixed span.crea:focus{
     background-color: var(--color-trois);
     color: var(--color-une);
     
@@ -220,7 +258,7 @@ nav.fixed #superieure a:hover , nav.fixed #superieure a:focus, nav.fixed span.cr
 
 /* ========================  Inférieure  =========================== */
 
-#inferieure{
+.inferieure{
     width: 0%;
     opacity: 0;
     
@@ -230,11 +268,12 @@ nav.fixed #superieure a:hover , nav.fixed #superieure a:focus, nav.fixed span.cr
     
     position: absolute;
     top: 8vh;
+    overflow: hidden;
 
     visibility: hidden;
 }
 
-#superieure li:hover > ul , #superieure li:focus > ul{
+#superieure li:hover > .inferieure , #superieure li:focus > .inferieure{
     visibility: visible;
     opacity: 1;
     padding: 0px;
@@ -242,7 +281,7 @@ nav.fixed #superieure a:hover , nav.fixed #superieure a:focus, nav.fixed span.cr
     width: auto;
 }
 
-#inferieure li{
+ul.inferieure li{
     display: block;
 
     float: none;
@@ -250,7 +289,7 @@ nav.fixed #superieure a:hover , nav.fixed #superieure a:focus, nav.fixed span.cr
     width: 100%;
 }
 
-nav #superieure #inferieure a{
+nav #superieure .inferieure a{
     display: block;
     padding: 10px;
     
@@ -261,7 +300,7 @@ nav #superieure #inferieure a{
     color: var(--color-une);
 }
 
-nav #superieure #inferieure a:hover, nav #superieure #inferieure a:focus{
+nav #superieure .inferieure a:hover, nav #superieure .inferieure a:focus{
     color: var(--color-trois);
     
     background-color: var(--color-une);
@@ -293,6 +332,7 @@ main section h2{
     color: var(--color-deux);
 
     margin-left: 20px;
+    margin-bottom: 20px;
 
     text-align: center;
     position: relative;
@@ -316,10 +356,13 @@ main section p{
     box-sizing: border-box;
     width: 400px;
 
+    text-align: left;
+
     font-size: 1.3em;
     font-weight: 600;
 
     margin: 0px;
+    margin-top: 40px;
     padding-left: 10px;
     color: #000;
 }
@@ -352,6 +395,9 @@ section.list{
     margin: auto;
     margin: 5em auto 5em auto;
     padding-bottom: 5em;
+}
+
+section.list:not(:last-of-type){
     border-bottom: 5px solid var(--color-une)
 }
 
