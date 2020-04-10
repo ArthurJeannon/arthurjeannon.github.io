@@ -615,3 +615,7 @@ footer{
     background-color: var(--color-une);
     height: 5em;
 }
+
+footer p {
+    color: #fff;
+}
